@@ -75,12 +75,12 @@ def main(target_column='Class'):
         train_processed = preprocess_df(train_data, target_column)
         test_processed = preprocess_df(test_data, target_column)
 
-        # Save processed data
-        output_path = './data/processed'
-        os.makedirs(output_path, exist_ok=True)
+        # Store the data inside data/processed
+        data_path = os.path.join("./data", "interim")
+        os.makedirs(data_path, exist_ok=True)
 
-        train_processed.to_csv(os.path.join(output_path, 'train_processed.csv'), index=False)
-        test_processed.to_csv(os.path.join(output_path, 'test_processed.csv'), index=False)
+        train_processed.to_csv(os.path.join(data_path, 'train_processed.csv'), index=False)
+        test_processed.to_csv(os.path.join(data_path, 'test_processed.csv'), index=False)
 
         logger.debug("Processed data saved successfully")
 

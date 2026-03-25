@@ -1,3 +1,8 @@
 2026-03-25 16:00:59,477 - data_ingestion - DEBUG - Parameters retrieved from params.yaml
 2026-03-25 16:00:59,479 - data_ingestion - ERROR - Unexpected error while loading data: [Errno 2] No such file or directory: 'C:\\practice\\Fraud_Detection_Analysis\\experiments\\creditdata.csv'
 2026-03-25 16:00:59,479 - data_ingestion - ERROR - Data ingestion failed: [Errno 2] No such file or directory: 'C:\\practice\\Fraud_Detection_Analysis\\experiments\\creditdata.csv'
+2026-03-25 17:01:21,569 - data_ingestion - DEBUG - Parameters retrieved from params.yaml
+2026-03-25 17:01:21,727 - data_ingestion - DEBUG - Data loaded from C:\practice\Fraud_Detection_Analysis\experiments\creditdata.csv, shape: (25492, 31)
+2026-03-25 17:01:21,728 - data_ingestion - DEBUG - Data preprocessing completed, shape: (25492, 31)
+2026-03-25 17:01:22,649 - data_ingestion - DEBUG - Train and test data saved to ./data\raw
+2026-03-25 17:01:22,649 - data_ingestion - INFO - Data ingestion process completed successfully

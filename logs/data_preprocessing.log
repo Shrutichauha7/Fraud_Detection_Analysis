@@ -9,3 +9,53 @@
 2026-03-25 15:29:02,395 - DEBUG - Numerical features scaled
 2026-03-25 15:29:03,279 - DEBUG - Processed data saved successfully
 2026-03-25 16:00:23,915 - ERROR - Pipeline failed: [Errno 2] No such file or directory: './data/raw/train.csv'
+2026-03-25 16:43:20,614 - DEBUG - Data loaded successfully
+2026-03-25 16:43:20,615 - DEBUG - Starting preprocessing
+2026-03-25 16:43:20,660 - DEBUG - Duplicates removed
+2026-03-25 16:43:20,677 - DEBUG - Missing values handled
+2026-03-25 16:43:20,707 - DEBUG - Numerical features scaled
+2026-03-25 16:43:20,713 - DEBUG - Starting preprocessing
+2026-03-25 16:43:20,723 - DEBUG - Duplicates removed
+2026-03-25 16:43:20,730 - DEBUG - Missing values handled
+2026-03-25 16:43:20,741 - DEBUG - Numerical features scaled
+2026-03-25 16:43:22,202 - DEBUG - Processed data saved successfully
+2026-03-25 16:56:24,961 - DEBUG - Data loaded successfully
+2026-03-25 16:56:24,962 - DEBUG - Starting preprocessing
+2026-03-25 16:56:25,007 - DEBUG - Duplicates removed
+2026-03-25 16:56:25,027 - DEBUG - Missing values handled
+2026-03-25 16:56:25,062 - DEBUG - Numerical features scaled
+2026-03-25 16:56:25,072 - DEBUG - Starting preprocessing
+2026-03-25 16:56:25,079 - DEBUG - Duplicates removed
+2026-03-25 16:56:25,088 - DEBUG - Missing values handled
+2026-03-25 16:56:25,099 - DEBUG - Numerical features scaled
+2026-03-25 16:56:26,539 - DEBUG - Processed data saved successfully
+2026-03-25 16:59:56,807 - DEBUG - Data loaded successfully
+2026-03-25 16:59:56,827 - DEBUG - Starting preprocessing
+2026-03-25 16:59:56,968 - DEBUG - Duplicates removed
+2026-03-25 16:59:57,046 - DEBUG - Missing values handled
+2026-03-25 16:59:57,103 - DEBUG - Numerical features scaled
+2026-03-25 16:59:57,123 - DEBUG - Starting preprocessing
+2026-03-25 16:59:57,158 - DEBUG - Duplicates removed
+2026-03-25 16:59:57,181 - DEBUG - Missing values handled
+2026-03-25 16:59:57,245 - DEBUG - Numerical features scaled
+2026-03-25 16:59:57,312 - ERROR - Pipeline failed: name 'output_path' is not defined
+2026-03-25 17:00:50,513 - DEBUG - Data loaded successfully
+2026-03-25 17:00:50,513 - DEBUG - Starting preprocessing
+2026-03-25 17:00:50,543 - DEBUG - Duplicates removed
+2026-03-25 17:00:50,562 - DEBUG - Missing values handled
+2026-03-25 17:00:50,593 - DEBUG - Numerical features scaled
+2026-03-25 17:00:50,600 - DEBUG - Starting preprocessing
+2026-03-25 17:00:50,609 - DEBUG - Duplicates removed
+2026-03-25 17:00:50,616 - DEBUG - Missing values handled
+2026-03-25 17:00:50,627 - DEBUG - Numerical features scaled
+2026-03-25 17:00:51,663 - DEBUG - Processed data saved successfully
+2026-03-25 17:01:46,653 - DEBUG - Data loaded successfully
+2026-03-25 17:01:46,653 - DEBUG - Starting preprocessing
+2026-03-25 17:01:46,701 - DEBUG - Duplicates removed
+2026-03-25 17:01:46,728 - DEBUG - Missing values handled
+2026-03-25 17:01:46,769 - DEBUG - Numerical features scaled
+2026-03-25 17:01:46,776 - DEBUG - Starting preprocessing
+2026-03-25 17:01:46,786 - DEBUG - Duplicates removed
+2026-03-25 17:01:46,796 - DEBUG - Missing values handled
+2026-03-25 17:01:46,823 - DEBUG - Numerical features scaled
+2026-03-25 17:01:48,444 - DEBUG - Processed data saved successfully

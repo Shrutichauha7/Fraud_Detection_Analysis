@@ -92,7 +92,6 @@ def train_model(X_train, y_train, params):
             max_depth=params['max_depth'],
             random_state=params['random_state'],
             scale_pos_weight=scale_pos_weight,
-            use_label_encoder=False,
             eval_metric='logloss'
         )
 
@@ -122,7 +121,7 @@ def main():
     try:
         
         params = load_params('params.yaml')['model_building']
-        train_data = load_data('./data/processed/train_processed.csv')
+        train_data = load_data('./data/interim/train_processed.csv')
         
         X_train = train_data.drop(columns=['Class']).values
         y_train = train_data['Class'].values
