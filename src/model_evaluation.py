@@ -128,7 +128,7 @@ def main():
         model = load_model('./models/xgb_model.pkl')
 
         # Load test data
-        test_data = load_data('./data/processed/test_processed.csv')
+        test_data = load_data('./data/interim/test_processed.csv')
 
         # Split features & target
         X_test = test_data.drop(columns=['Class']).values
