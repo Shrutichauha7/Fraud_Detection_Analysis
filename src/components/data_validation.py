@@ -32,7 +32,9 @@ class DataValidation:
             if missing_columns:
                 logging.info(f"Missing columns: {missing_columns}")
             if extra_columns:
-                logging.info(f"Extra columns: {extra_columns}")
+
+                if "_id" in extra_columns:
+                        extra_columns.remove("_id")
 
             return len(missing_columns) == 0
 
@@ -70,45 +72,51 @@ class DataValidation:
             return pd.read_csv(file_path)
         except Exception as e:
             raise MyException(e, sys)
-
+        
     def initiate_data_validation(self) -> DataValidationArtifact:
         try:
-            validation_error_msg = "validation successfully completed"
+            validation_error_msg = []
             logging.info("Starting data validation")
 
             train_df = self.read_data(self.data_ingestion_artifact.trained_file_path)
             test_df = self.read_data(self.data_ingestion_artifact.test_file_path)
 
-            
             drop_cols = self._schema_config.get("drop_columns", [])
             if drop_cols:
                 train_df.drop(columns=drop_cols, inplace=True, errors="ignore")
                 test_df.drop(columns=drop_cols, inplace=True, errors="ignore")
                 logging.info(f"Dropped columns: {drop_cols}")
 
-            
+            # Validate columns
             if not self.validate_columns(train_df):
-                validation_error_msg += "Missing columns in training dataframe. "
+                validation_error_msg.append("Missing columns in training dataframe.")
             else:
                 logging.info("Training dataframe columns validated.")
 
             if not self.validate_columns(test_df):
-                validation_error_msg += "Missing columns in test dataframe. "
+                validation_error_msg.append("Missing columns in test dataframe.")
             else:
                 logging.info("Testing dataframe columns validated.")
 
-            
+            # Validate column existence
             if not self.is_column_exist(train_df):
-                validation_error_msg += "Columns missing in training dataframe. "
+                validation_error_msg.append("Columns missing in training dataframe.")
 
             if not self.is_column_exist(test_df):
-                validation_error_msg += "Columns missing in test dataframe. "
+                validation_error_msg.append("Columns missing in test dataframe.")
 
+            # Final status
             validation_status = len(validation_error_msg) == 0
+
+            final_message = (
+                "Validation successfully completed"
+                if validation_status
+                else " ".join(validation_error_msg)
+            )
 
             data_validation_artifact = DataValidationArtifact(
                 validation_status=validation_status,
-                message=validation_error_msg,
+                message=final_message,
                 validation_report_file_path=self.data_validation_config.validation_report_file_path
             )
 
@@ -117,7 +125,7 @@ class DataValidation:
             with open(self.data_validation_config.validation_report_file_path, "w") as report_file:
                 json.dump({
                     "validation_status": validation_status,
-                    "message": validation_error_msg.strip()
+                    "message": final_message
                 }, report_file, indent=4)
 
             logging.info("Data validation completed.")

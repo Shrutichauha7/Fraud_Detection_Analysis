@@ -31,6 +31,8 @@ columns:
   - Amount: float
   - Class: int
 
+target_column: Class
+
 numerical_columns:
   - Time
   - V1
@@ -65,7 +67,9 @@ numerical_columns:
 
 categorical_columns: []
 
-drop_columns: []
+
+drop_columns:
+  - _id
 
 # for data transformation
 num_features:
